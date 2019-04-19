@@ -1,0 +1,9 @@
+<h2>Lista de Celebridades</h2>
+<ul>
+  {{#each celebrities}}
+    <!-- Enlace a los detalles de la celebridad -->
+    <li><a href="/celebrities/{{this._id}}">{{this.name}}</a></li>
+  {{/each}}
+</ul>
+<!-- Enlace para crear una nueva celebridad -->
+<a href="/celebrities/new">Añadir nueva celebridad</a>

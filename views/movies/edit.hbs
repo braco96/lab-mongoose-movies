@@ -1,0 +1,19 @@
+<h2>Editar Película</h2>
+<!-- Formulario para editar con datos actuales -->
+<form action="/movies/{{movie._id}}" method="POST">
+  <label>Título</label>
+  <input type="text" name="title" value="{{movie.title}}" />
+  <label>Género</label>
+  <input type="text" name="genre" value="{{movie.genre}}" />
+  <label>Trama</label>
+  <input type="text" name="plot" value="{{movie.plot}}" />
+  <label>Reparto</label>
+  <select name="cast" multiple>
+    {{#each celebrities}}
+      <!-- Marcamos las celebridades que ya están seleccionadas -->
+      <option value="{{this._id}}" {{#if this.selected}}selected{{/if}}>{{this.name}}</option>
+    {{/each}}
+  </select>
+  <button type="submit">Guardar</button>
+</form>
+<a href="/movies/{{movie._id}}">Cancelar</a>

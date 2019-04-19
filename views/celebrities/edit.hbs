@@ -1,0 +1,12 @@
+<h2>Editar Celebridad</h2>
+<!-- Formulario pre-rellenado con los datos actuales -->
+<form action="/celebrities/{{celebrity._id}}" method="POST">
+  <label>Nombre</label>
+  <input type="text" name="name" value="{{celebrity.name}}" />
+  <label>Ocupación</label>
+  <input type="text" name="occupation" value="{{celebrity.occupation}}" />
+  <label>Frase</label>
+  <input type="text" name="catchPhrase" value="{{celebrity.catchPhrase}}" />
+  <button type="submit">Guardar</button>
+</form>
+<a href="/celebrities/{{celebrity._id}}">Cancelar</a>

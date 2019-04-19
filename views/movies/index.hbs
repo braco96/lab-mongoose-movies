@@ -1,0 +1,9 @@
+<h2>Lista de Películas</h2>
+<ul>
+  {{#each movies}}
+    <!-- Enlace a los detalles de cada película -->
+    <li><a href="/movies/{{this._id}}">{{this.title}}</a></li>
+  {{/each}}
+</ul>
+<!-- Enlace para crear una nueva película -->
+<a href="/movies/new">Añadir nueva película</a>

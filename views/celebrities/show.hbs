@@ -1,0 +1,11 @@
+<!-- Página de detalles de una celebridad -->
+<h2>{{celebrity.name}}</h2>
+<p>Ocupación: {{celebrity.occupation}}</p>
+<p>Frase: {{celebrity.catchPhrase}}</p>
+<!-- Formulario para eliminar la celebridad -->
+<form action="/celebrities/{{celebrity._id}}/delete" method="POST">
+  <button type="submit">Eliminar</button>
+</form>
+<!-- Enlace para editar la celebridad -->
+<a href="/celebrities/{{celebrity._id}}/edit">Editar</a>
+<a href="/celebrities">Volver al listado</a>
